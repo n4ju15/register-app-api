@@ -1,6 +1,6 @@
-const express = require('express') // Importa a biblioteca Express
-const uuid = require('uuid') // Importa a biblioteca UUID 
-const cors = require('cors');
+import express from 'express' // Importa a biblioteca Express
+import uuid from 'uuid' // Importa a biblioteca UUID 
+import cors from 'cors';
 
 const port = process.env.PORT || 3001
 const app = express() 
