@@ -1,6 +1,6 @@
 import express from 'express' // Importa a biblioteca Express
-import uuid from 'uuid' // Importa a biblioteca UUID 
-import cors from 'cors';
+import { v4 as uuidv4 } from 'uuid' // Importa a biblioteca UUID 
+import cors from 'cors'
 
 const port = process.env.PORT || 3001
 const app = express() 
@@ -39,7 +39,7 @@ app.post('/users', (request, response) => { // Rota para criar usuários
 
         if(age < 12) throw new Error("Only allowed users over 18 years old!") // Cria uma nova condição que se não for atendida cria um erro que faz cair automaticamente no bloco de Catch
 
-        const user = { id: uuid.v4(), name, age }
+        const user = { id: uuidv4(), name, age }
 
         users.push(user) // Cria uma informação no array
 
