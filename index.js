@@ -37,7 +37,7 @@ app.post('/users', (request, response) => { // Rota para criar usuários
     try {
         const { name, age } = request.body
 
-        if(age < 12) throw new Error("Only allowed users over 18 years old!") // Cria uma nova condição que se não for atendida cria um erro que faz cair automaticamente no bloco de Catch
+        if(age < 12) throw new Error("Only allowed users over 12 years old!") // Cria uma nova condição que se não for atendida cria um erro que faz cair automaticamente no bloco de Catch
 
         const user = { id: uuidv4(), name, age }
 
